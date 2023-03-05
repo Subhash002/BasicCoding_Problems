@@ -148,7 +148,15 @@ const empty = (arr) => {
   return (arr = "");
 };
 // JavaScript Program to Add Element to Start of an Array
+const addFirst = (arr,ele)=>{
+  let result = [];
+  result[0] = ele;
+  for (let i = 0; i < arr.length; i++) {
 
+      result[i+1] = arr[i];
+  }
+  return result;
+}
 // JavaScript Program to Remove Duplicates From Array
 const removeEle = (arr)=>{
   let results = [];
