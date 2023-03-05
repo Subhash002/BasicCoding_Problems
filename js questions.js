@@ -225,11 +225,19 @@ const emailValidate=(email)=>{
 // JavaScript Program to Check If a Variable is of Function Type
 // JavaScript Program To Work With Constants
 // JavaScript Program to Pass Parameter to a setTimeout() Function
+const delayedFunction=(fn,delay)=>{
+  return setTimeout(fn,delay);
+}
 // JavaScript Program to Generate a Range of Numbers and Characters
 // JavaScript Program to Perform Function Overloading
 // JavaScript Program to Implement a Stack
 // JavaScript Program to Implement a Queue
 // JavaScript Program to Check if a Number is Float or Integer
+const numCheck=(num)=>{
+  if(Number.isInteger(num)){
+    //Will implement soon
+  }
+}
 // JavaScript Program to Pass a Function as Parameter
 const functionUnderFuntion = (fun, str) => {
   return fun(str);
