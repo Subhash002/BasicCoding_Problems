@@ -121,6 +121,18 @@ const mergeProperty=(...object)=>{
 // JavaScript Program to Create Multiline Strings
 // JavaScript Program to Format Numbers as Currency Strings
 // JavaScript Program to Generate Random String
+function generateRandomString(wordLength,wordCount) {
+  let randomString = '';
+  for (let j = 0; j < wordCount; j++) {
+      for (let i = 0; i < wordLength; i++) {
+          let randomNumber = Math.floor(Math.random() * (122 - 97 + 1) + 97);;
+          randomString += String.fromCharCode(randomNumber);
+      }
+      randomString+=' ';
+  }
+
+  return randomString;
+}
 // JavaScript Program to Check if a String Starts With Another String
 // JavaScript Program to Trim a String
 // JavaScript Program to Convert Objects to Strings
