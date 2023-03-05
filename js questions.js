@@ -70,7 +70,6 @@ const fibonacciNumber = (n)=>{
   let second = 1;
   console.log(first);
   while (n > 0) {
-      //
       sum = first + second
       first = second;
       second = sum;
@@ -90,6 +89,12 @@ const fibonacciNumber = (n)=>{
 // JavaScript Program to Guess a Random Number
 // JavaScript Program to Shuffle Deck of Cards
 // JavaScript Program to Display Fibonacci Sequence Using Recursion
+function fibRecursion(n){
+  if(n<2){
+    return n;
+  }
+  else return fibRecursion(n-1)+fibRecursion(n-2)
+}
 // JavaScript Program to Find Factorial of Number Using Recursion
 // JavaScript Program to Convert Decimal to Binary
 // JavaScript Program to Find ASCII Value of Character
@@ -160,6 +165,9 @@ const fileExt = (completeName) => {
 // JavaScript Program to Illustrate Different Set Operations
 // Javascript Program to Generate a Random Number Between Two Numbers
 // JavaScript Program To Get The Current URL
+const currentURL=()=>{
+  return window.location.href;
+}
 // JavaScript Program to Validate An Email Address
 // JavaScript Program to Check If a Variable is of Function Type
 // JavaScript Program To Work With Constants
@@ -184,3 +192,4 @@ const removeSpace = (str) => {
 // JavaScript Program to Write to Console
 // JavaScript Program to Convert Date to Number
 // Implement Area with two subclass that inherits properties of base class area
+//JavaScript Program to remove duplicates from array.
