@@ -262,7 +262,10 @@ const writeConsole=(value)=>{
   return `${value}`;
 }
 // JavaScript Program to Convert Date to Number
-
+const dateToString=()=>{
+  let date=new Date();
+  return date.getTime();
+}
 // Implement Area with two subclass that inherits properties of base class area
 //JavaScript Program to remove duplicates from array.
 const removeEle = (arr)=>{
