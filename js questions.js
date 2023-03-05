@@ -202,6 +202,15 @@ const getRandEle=(arr)=>{
 }
 // JavaScript Program To Perform Intersection Between Two Arrays
 // JavaScript Program to Split Array into Smaller Chunks
+function splitter(arr,n){
+  let newArray=[];
+  for(let i=0;i<arr.length;i+=n){
+      let smallArray=arr.slice(i,i+n);
+      newArray.push(smallArray);
+  }
+  return newArray;
+}
+
 // JavaScript Program to Include a JS file in Another JS file
 // JavaScript Program to Get File Extension
 const fileExt = (completeName) => {
