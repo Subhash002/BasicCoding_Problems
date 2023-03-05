@@ -125,7 +125,7 @@ function generateRandomString(wordLength,wordCount) {
   let randomString = '';
   for (let j = 0; j < wordCount; j++) {
       for (let i = 0; i < wordLength; i++) {
-          let randomNumber = Math.floor(Math.random() * (122 - 97 + 1) + 97);;
+          let randomNumber = Math.floor(Math.random() * (122 - 97 + 1) + 97);
           randomString += String.fromCharCode(randomNumber);
       }
       randomString+=' ';
@@ -136,6 +136,7 @@ function generateRandomString(wordLength,wordCount) {
 // JavaScript Program to Check if a String Starts With Another String
 // JavaScript Program to Trim a String
 // JavaScript Program to Convert Objects to Strings
+
 // JavaScript Program to Check Whether a String Contains a Substring
 // JavaScript Program to Compare Two Strings
 // JavaScript Program to Encode a String to Base64
@@ -234,6 +235,13 @@ const functionUnderFuntion = (fun, str) => {
   return fun(str);
 };
 // JavaScript Program to Get the Dimensions of an Image
+const imageSize = ()=>{//This function will return dimention of first image of any website
+  let myImage = document.querySelector("img");
+  let width = myImage.clientWidth;
+  let height = myImage.clientHeight;
+  console.log(width);
+  console.log(height)
+}
 // JavaScript Program to Remove All Whitespaces From a Text
 const removeSpace = (str) => {
   return str
