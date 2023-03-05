@@ -152,6 +152,7 @@ const empty = (arr) => {
 // JavaScript Program to Extract Given Property Values from Objects as Array
 // JavaScript Program to Compare Elements of Two Arrays
 // JavaScript Program to Get Random Item From an Array
+
 // JavaScript Program To Perform Intersection Between Two Arrays
 // JavaScript Program to Split Array into Smaller Chunks
 // JavaScript Program to Include a JS file in Another JS file
@@ -193,3 +194,12 @@ const removeSpace = (str) => {
 // JavaScript Program to Convert Date to Number
 // Implement Area with two subclass that inherits properties of base class area
 //JavaScript Program to remove duplicates from array.
+const removeEle = (arr)=>{
+  let results = [];
+  for (let i = 0; i < arr.length; i++) {
+      if (!results.includes(arr[i])) {
+          results.push(arr[i]);
+      }
+  }
+  return results;
+}
