@@ -102,6 +102,9 @@ function fibRecursion(n){
 // JavaScript Program to Sort Words in Alphabetical Order
 // JavaScript Program to Replace Characters of a String
 // JavaScript Program to Reverse a String
+const reverse=(string)=>{
+  return string.split("").reverse().join("")
+}
 // JavaScript Program to Create Objects in Different Ways
 // JavaScript Program to Check the Number of Occurrences of a Character in the String
 // JavaScript Program to Convert the First Letter of a String into UpperCase
