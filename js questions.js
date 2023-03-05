@@ -170,6 +170,11 @@ const currentURL=()=>{
   return window.location.href;
 }
 // JavaScript Program to Validate An Email Address
+const emailValidate=(email)=>{
+  if(email.split("").includes('.','@','com')){
+      return `Valid EMAIL`;
+  } else return `INVALID EMAIL`;
+}
 // JavaScript Program to Check If a Variable is of Function Type
 // JavaScript Program To Work With Constants
 // JavaScript Program to Pass Parameter to a setTimeout() Function
