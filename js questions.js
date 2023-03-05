@@ -64,6 +64,20 @@ const largestNum = (num1, num2, num3) => {
 // JavaScript Program to Find the Factorial of a Number
 // JavaScript Program to Display the Multiplication Table
 // JavaScript Program to Print the Fibonacci Sequence
+const fibonacciNumber = (n)=>{
+  let sum = 0
+  let first = 0;
+  let second = 1;
+  console.log(first);
+  while (n > 0) {
+      //
+      sum = first + second
+      first = second;
+      second = sum;
+      console.log(first);
+      n--;
+  }
+}
 // JavaScript Program to Check Armstrong Number
 // JavaScript Program to Find Armstrong Number in an Interval
 // JavaScript Program to Make a Simple Calculator
@@ -93,6 +107,9 @@ const largestNum = (num1, num2, num3) => {
 // JavaScript Program to Clone a JS Object
 // JavaScript Program to Loop Through an Object
 // JavaScript Program to Merge Property of Two Objects
+const mergeProperty=(...object)=>{
+  return Object.assign(...object);
+}
 // JavaScript Program to Count the Number of Keys/Properties in an Object
 // JavaScript Program to Add Key/Value Pair to an Object
 // JavaScript Program to Replace All Occurrences of a String
