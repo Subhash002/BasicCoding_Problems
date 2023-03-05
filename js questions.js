@@ -192,6 +192,11 @@ for (let i = 0; i < newArray.length; i++) {
 return results;
 }
 // JavaScript Program to Sort Array of Objects by Property Values
+function functionSort(arr){
+  return arr.sort((a,b)=>{
+    a.x-b.x;
+  })
+}
 // JavaScript Program to Create Two Dimensional Array
 // JavaScript Program to Extract Given Property Values from Objects as Array
 // JavaScript Program to Compare Elements of Two Arrays
@@ -221,6 +226,9 @@ const fileExt = (completeName) => {
 // JavaScript Program to Set a Default Parameter Value For a Function
 // JavaScript Program to Illustrate Different Set Operations
 // Javascript Program to Generate a Random Number Between Two Numbers
+function randomBw(max,min){
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
 // JavaScript Program To Get The Current URL
 const currentURL=()=>{
   return window.location.href;
