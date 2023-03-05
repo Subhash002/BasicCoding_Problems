@@ -258,7 +258,11 @@ const removeSpace = (str) => {
     .join("");
 };
 // JavaScript Program to Write to Console
+const writeConsole=(value)=>{
+  return `${value}`;
+}
 // JavaScript Program to Convert Date to Number
+
 // Implement Area with two subclass that inherits properties of base class area
 //JavaScript Program to remove duplicates from array.
 const removeEle = (arr)=>{
