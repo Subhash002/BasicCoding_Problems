@@ -59,8 +59,35 @@ const largestNum = (num1, num2, num3) => {
   }
 };
 // JavaScript Program to Check Prime Number
+const primeCheck = (num)=>{
+  let counter = 0;
+  for (let i = 1; i <= num; i++) {
+      if (num % i === 0) {
+          counter++;
+      }
+  }
+  if (counter > 2)
+      return `NOT A PRIME NUMBER`;
+  else
+      return `PRIME NUMBER`
+}
 
 // JavaScript Program to Print All Prime Numbers in an Interval
+const primeCheckInterval = (num1,num2)=>{
+  let primeList = [];
+  for(let j=num1;j<num2;j++){
+      let isFlag=0;
+      for(let i=2;i<j;i++){
+          if(j%i===0){
+              isFlag=1;
+          }
+      }
+      if(!isFlag){
+          primeList.push(j)
+      }
+  }
+  return primeList;
+}
 // JavaScript Program to Find the Factorial of a Number
 // JavaScript Program to Display the Multiplication Table
 // JavaScript Program to Print the Fibonacci Sequence
