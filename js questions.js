@@ -151,6 +151,18 @@ function armNumber(num1,num2){
   }
 }
 // JavaScript Program to Make a Simple Calculator
+const calculator = (a,b,op)=>{
+  let ops = {
+      add: (a,b)=>a + b,
+      substract: (a,b)=>a - b,
+      multiply: (a,b)=>a * b,
+      divide: (a,b)=>a / b,
+      modulas: (a,b)=>a % b,
+  }
+  return ops[op](a,b);
+} //eg-calculator(4, 3, 'add')
+
+
 // JavaScript Program to Find the Sum of Natural Numbers
 // JavaScript Program to Check if the Numbers Have Same Last Digit
 // JavaScript Program to Find HCF or GCD
