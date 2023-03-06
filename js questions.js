@@ -164,10 +164,54 @@ const calculator = (a,b,op)=>{
 
 
 // JavaScript Program to Find the Sum of Natural Numbers
+const sumNN=(n)=>{
+  return n*(n+1)/2;
+}
 // JavaScript Program to Check if the Numbers Have Same Last Digit
+const checkLastDigit = (...args)=>{
+  const lastDigit = args.map((num)=>num % 10);
+  return lastDigit.every((digit=>lastDigit.indexOf(digit) !== lastDigit.lastIndexOf(digit)));
+}
 // JavaScript Program to Find HCF or GCD
+const multiFactor = (a,b,op)=>{
+  let ops = {
+      LCM: (a,b)=>{
+          let results = [];
+          for (let i = 1; i <= Math.max(a, b); i++) {
+              if (a % i === 0 && b % i === 0)
+                  results.push(i);
+          }
+          let hcf = Math.max(...results);
+          return (a * b) / hcf;
+      }
+      ,
+      HCF: (a,b)=>{
+          let results = [];
+          for (let i = 1; i <= Math.max(a, b); i++) {
+              if (a % i === 0 && b % i === 0)
+                  results.push(i);
+          }
+          return Math.max(...results);
+      }
+      ,
+      GCD: (a,b)=>{
+          return !b ? a : multiFactor(b, a % b, 'GCD')
+      }
+      ,
+  };
+  return ops[op](a, b);
+}
 // JavaScript Program to Find LCM
+//-->LCM COVERED IN ABOVE Program
 // JavaScript Program to Find the Factors of a Number
+const factor = (num)=>{
+  let results = [];
+  for (let i = 1; i <= num; i++) {
+      if (num % i === 0)
+          results.push(i);
+  }
+  return results;
+}
 // JavaScript Program to Find Sum of Natural Numbers Using Recursion
 // JavaScript Program to Guess a Random Number
 // JavaScript Program to Shuffle Deck of Cards
