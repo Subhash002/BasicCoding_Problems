@@ -142,7 +142,14 @@ const checkArmStrong1 = (n)=>{
   return n === numArray.reduce((total,item)=>total + Math.pow(item, numArray.length), 0);
 }
 // JavaScript Program to Find Armstrong Number in an Interval
-
+function armNumber(num1,num2){
+  for(i=num1;i<=num2;i++){
+      const numArray = i.toString().split("").map(i=>parseInt(i));
+      if(i === numArray.reduce((total,item)=>total + Math.pow(item, numArray.length), 0)){
+          console.log(i);
+      }
+  }
+}
 // JavaScript Program to Make a Simple Calculator
 // JavaScript Program to Find the Sum of Natural Numbers
 // JavaScript Program to Check if the Numbers Have Same Last Digit
