@@ -44,9 +44,12 @@ function quardicEquation (a,b,c){
 
 // JavaScript Program to Convert Kilometers to Miles
 const toMiles = (km) => {
-  return 0.62 * km;
+  return `${0.62 * km} kms`;
 };
 // Javascript Program to Convert Celsius to Fahrenheit
+const tofahrenheit=(cel)=>{
+  return `${(cel*(9/5))+32} Degree F`
+}
 // Javascript Program to Generate a Random Number
 const geneRandom = () => {
   return Math.random();
@@ -106,6 +109,7 @@ const primeCheckInterval = (num1,num2)=>{
   return primeList;
 }
 // JavaScript Program to Find the Factorial of a Number
+
 // JavaScript Program to Display the Multiplication Table
 // JavaScript Program to Print the Fibonacci Sequence
 const fibonacciNumber = (n)=>{
