@@ -24,6 +24,23 @@ const swap = (x, y) => {
   return [x, y];
 };
 // Javascript Program to Solve Quadratic Equation
+function quardicEquation (a,b,c){
+  let d = b * b - (4 * a * c);
+  if (d > 0) {
+      let x1 = (-b + Math.sqrt(d)) / (2 * a);
+      let x2 = (-b - Math.sqrt(d)) / (2 * a);
+      console.log(`Roots are real and different`);
+      console.log(`X1 IS ${x1} AND X2 IS ${x2}`);
+  } else if (d === 0) {
+      let x1 = (-b) / (2 * a);
+      let x2 = x1;
+      console.log(`Roots are real and same`);
+      console.log(`X1 IS ${x1} AND X2 IS ${x2}`);
+  } else {
+      console.log(`Roots are complex and different`);
+      console.log(`This cant be solved`);
+  }
+}
 
 // JavaScript Program to Convert Kilometers to Miles
 const toMiles = (km) => {
