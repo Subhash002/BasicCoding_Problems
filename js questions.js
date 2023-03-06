@@ -109,8 +109,19 @@ const primeCheckInterval = (num1,num2)=>{
   return primeList;
 }
 // JavaScript Program to Find the Factorial of a Number
+const fact = (num)=>{
+  if (num === 1)
+      return 1;
+  else return num*fact(num-1);
+}
 
 // JavaScript Program to Display the Multiplication Table
+const multiplicatinTable = (num)=>{
+  for (let i = 1; i < 11; i++) {
+      console.log(`${num} * ${i} =${num * i}`);
+  }
+}
+
 // JavaScript Program to Print the Fibonacci Sequence
 const fibonacciNumber = (n)=>{
   let sum = 0
@@ -126,7 +137,12 @@ const fibonacciNumber = (n)=>{
   }
 }
 // JavaScript Program to Check Armstrong Number
+const checkArmStrong1 = (n)=>{
+  const numArray = n.toString().split("").map(n=>parseInt(n));
+  return n === numArray.reduce((total,item)=>total + Math.pow(item, numArray.length), 0);
+}
 // JavaScript Program to Find Armstrong Number in an Interval
+
 // JavaScript Program to Make a Simple Calculator
 // JavaScript Program to Find the Sum of Natural Numbers
 // JavaScript Program to Check if the Numbers Have Same Last Digit
