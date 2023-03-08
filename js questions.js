@@ -213,8 +213,43 @@ const factor = (num)=>{
   return results;
 }
 // JavaScript Program to Find Sum of Natural Numbers Using Recursion
+const sumN=(n)=>{
+  if(n<1) return 0;
+  else 
+      return n+sumN(n-1);
+}
 // JavaScript Program to Guess a Random Number
+function guessRandomNumber(n) {
+  return (n === Math.floor(Math.random() * 10) + 1) ? `CORRECT GUESS` : `INCORRECT GUESS`;
+}
+
 // JavaScript Program to Shuffle Deck of Cards
+function generateDeck(){
+	const deck=[];
+	const suits=['clubs','diamonds','hearts','spades'];
+	const values=['ace','2','3','4','5','6','7','8','9','10','jack','queen','king'];
+	for(const suit of suits){
+        for(const value of values){
+            deck.push({
+                suit:suit,
+                value:value,
+            })
+        }
+    }
+    return deck;
+	
+}
+
+function shuffleDeck(deck){
+	for(let i=deck.length-1;i>0;i--){
+		let randomIndex=Math.floor(Math.random()*(i+1));
+		let temp=deck[i];
+		deck[i]=deck[randomIndex];
+		deck[randomIndex]=temp;
+	}
+	return deck;
+}
+
 // JavaScript Program to Display Fibonacci Sequence Using Recursion
 function fibRecursion(n){
   if(n<2){
