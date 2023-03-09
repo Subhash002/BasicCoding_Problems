@@ -258,11 +258,46 @@ function fibRecursion(n){
   else return fibRecursion(n-1)+fibRecursion(n-2)
 }
 // JavaScript Program to Find Factorial of Number Using Recursion
+const fact = (n)=>{
+  if (n === 1)
+      return 1;
+  else
+      return n * fact(n - 1);
+}
 // JavaScript Program to Convert Decimal to Binary
+function toBinary(num){
+  return num.toString(2);
+}
+
 // JavaScript Program to Find ASCII Value of Character
+function toASCII(letter){
+  return letter.charCodeAt();
+}
 // JavaScript Program to Check Whether a String is Palindrome or Not
+const Palindrome=(str)=>{
+  return (str.toLowerCase().split('').reverse().join('')===str.toLowerCase())?`PALINDROME`:`NOT A PALINDROME`;
+}
 // JavaScript Program to Sort Words in Alphabetical Order
+function wordSort(str){
+  return str.split('').sort().join('');
+}
 // JavaScript Program to Replace Characters of a String
+const replacer = (str, findC, replaceC) => {
+  const strArray = str.split('');
+  const findArray = findC.split('');
+  const replaceArray = replaceC.split('');
+  for (let i = 0; i < strArray.length; i++) {
+    for (let j = 0; j < findArray.length; j++) {
+      if (strArray[i] === findArray[j] && strArray[i + 1] === findArray[j + 1]) {
+        strArray[i] = replaceArray[j];
+        strArray[i + 1] = replaceArray[j + 1];
+      }
+    }
+  }
+  return strArray.join('');
+}
+
+
 // JavaScript Program to Reverse a String
 const reverse=(string)=>{
   return string.split("").reverse().join("")
