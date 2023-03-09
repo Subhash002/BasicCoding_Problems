@@ -304,6 +304,26 @@ const reverse=(string)=>{
 }
 // JavaScript Program to Create Objects in Different Ways
 // JavaScript Program to Check the Number of Occurrences of a Character in the String
+const occurEN=(str,check)=>{
+  const splitArray=str.split('');
+  let counter=0;
+  splitArray.forEach(e=>{
+      if(e===check) counter++;
+  })
+  return counter;
+}
+// JavaScript Program to Check the Number of Occurrences of a Character in the String and returns the most repeatative one
+const CharCount=(str)=>{
+  const mapping={};
+  str.split('').forEach(e=>{
+      if(!mapping[e]){
+          mapping[e]=0;
+      }
+      mapping[e]++;
+  })
+  
+return `${Object.keys(mapping).filter(key=>mapping[key]===Math.max(...(Object.values(mapping))))}:${Math.max(...(Object.values(mapping)))}`;
+}
 // JavaScript Program to Convert the First Letter of a String into UpperCase
 // JavaScript Program to Count the Number of Vowels in a String
 // JavaScript Program to Remove a Property from an Object
