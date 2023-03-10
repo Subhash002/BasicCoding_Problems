@@ -325,18 +325,86 @@ const CharCount=(str)=>{
 return `${Object.keys(mapping).filter(key=>mapping[key]===Math.max(...(Object.values(mapping))))}:${Math.max(...(Object.values(mapping)))}`;
 }
 // JavaScript Program to Convert the First Letter of a String into UpperCase
+const firstUpper = (str)=>{
+  const strArray = str.split(" ");
+  return strArray.map(e=>e[0].toUpperCase() + e.slice(1, e.length)).join(" ");
+}
+
 // JavaScript Program to Count the Number of Vowels in a String
+const vowelCount=(str)=>{
+  const vowels=['a','e','i','o','u'];
+  const strArray=str.split("");
+  let counter=0;
+  strArray.forEach(el=>{
+      if(vowels.includes(el)) counter++;
+  })
+  return `Total number of vowels in the provided string are ${counter}`;
+}
 // JavaScript Program to Remove a Property from an Object
+const deletePro=(obj,property)=>{
+  for(let x in obj){
+      if(x===property){
+          delete obj[x];
+      }
+  }
+  return obj;
+} // eg:-deletePro(person,'age')
 // JavaScript Program to Check Whether a String Starts and Ends With Certain Characters
+const checkString=(str,start,end)=>{
+  const check=str.split('');;
+   let isContain=false;
+   if(check[0]===start && check[check.length-1]===end){
+       isContain=true;
+   }
+   return isContain;
+}
 // JavaScript Program to Check if a Key Exists in an Object
+const keyCheck=(obj,key)=>{
+  let isContain=false;
+  for(const k in obj){
+      if(k===key) isContain=true;
+  }
+  return isContain;
+}
 // JavaScript Program to Clone a JS Object
+//Method1-
+const deepClone=(obj)=>{ return structuredClone(obj);}
+
+//Method 2-
+const clone=(input)=>{
+  if(input===null || input!=='Object') return input;
+  const copy=Array.isArray(input)?[]:{};
+  for(key in input){
+      const value=input[key];
+      copy[key]=clone(value);
+  }
+  return copy;
+}
 // JavaScript Program to Loop Through an Object
+const objectLoop = (input)=>{
+  const isObject = (val)=>{
+      return (val === null) ? false : (typeof val === 'object');
+  }
+  for (let key in input) {
+      if (isObject(input[key]))
+          objectLoop(input[key]);
+      else
+          console.log(key, input[key]);
+  }
+}
+
 // JavaScript Program to Merge Property of Two Objects
 const mergeProperty=(...object)=>{
   return Object.assign(...object);
 }
 // JavaScript Program to Count the Number of Keys/Properties in an Object
+const objSize=(obj)=>{
+  return `Value count is : ${Object.values(obj).length} and Key Values is ${Object.keys(obj)}`
+}
 // JavaScript Program to Add Key/Value Pair to an Object
+const addKeyValue=(obj,key,value)=>{
+  return {...obj,[key]:value};
+}
 // JavaScript Program to Replace All Occurrences of a String
 // JavaScript Program to Create Multiline Strings
 // JavaScript Program to Format Numbers as Currency Strings
