@@ -406,6 +406,13 @@ const addKeyValue=(obj,key,value)=>{
   return {...obj,[key]:value};
 }
 // JavaScript Program to Replace All Occurrences of a String
+const replaceOccur2=(str,word,replace)=>{
+  return str.split(word).join(replace);
+}
+//M-2
+const replaceOccur = (str,word,replace)=>{
+  return str.split(' ').map(item => item === word ? replace : item).join(' ');
+}
 // JavaScript Program to Create Multiline Strings
 // JavaScript Program to Format Numbers as Currency Strings
 // JavaScript Program to Generate Random String
