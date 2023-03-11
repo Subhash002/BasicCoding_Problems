@@ -414,7 +414,11 @@ const replaceOccur = (str,word,replace)=>{
   return str.split(' ').map(item => item === word ? replace : item).join(' ');
 }
 // JavaScript Program to Create Multiline Strings
+
 // JavaScript Program to Format Numbers as Currency Strings
+const formatCurrency=(number)=> {
+  return (new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(number));
+}
 // JavaScript Program to Generate Random String
 function generateRandomString(wordLength,wordCount) {
   let randomString = '';
@@ -429,15 +433,58 @@ function generateRandomString(wordLength,wordCount) {
   return randomString;
 }
 // JavaScript Program to Check if a String Starts With Another String
+function startsWith(str, searchString) {
+  const strArray = str.split('');
+  const searchArray = searchString.split('');
+  for(let i=0;i<str.length;i++){
+      if(strArray[i]===searchArray[i] && strArray[i+1]===searchArray[i+1]) return true;
+  }
+  return false;
+}
 // JavaScript Program to Trim a String
-// JavaScript Program to Convert Objects to Strings
 
+function trimString(str) {
+  let start = 0;
+  let end = str.length - 1;
+  while (str[start] === ' ')
+      start++;
+  while (str[end] === ' ')
+      end--;
+  return str.substring(start,end+1)
+}
+// JavaScript Program to Convert Objects to Strings
+const objToString=(obj)=>{
+  return JSON.stringify(obj);
+}
 // JavaScript Program to Check Whether a String Contains a Substring
+const subString = (str,word)=>{
+  const strArray = str.split(' ');
+  for (let i = 0; i < strArray.length; i++) {
+      if (strArray[i] === word) {
+          return true;
+      }
+  }
+  return false;
+}
 // JavaScript Program to Compare Two Strings
+const sameString=(str1,str2)=>{
+  return JSON.stringify(str1)===JSON.stringify(str2);
+}
 // JavaScript Program to Encode a String to Base64
+function Encode(str){
+  return btoa(str);
+
+}
 // JavaScript Program to Replace all Instances of a Character in a String
+const replaceOccur2=(str,word,replace)=>{
+  return str.split(word).join(replace);
+}
 // JavaScript Program to Replace All Line Breaks with
+const replaceLineBreaks=(str,replace)=>{
+  return str.split(/\n/g).join(replace);
+}
 // JavaScript Program to Display Date and Time
+
 // JavaScript Program to Check Leap Year
 // JavaScript Program to Format the Date
 // Javascript Program to Display Current Date
