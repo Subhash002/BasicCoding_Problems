@@ -484,20 +484,59 @@ const replaceLineBreaks=(str,replace)=>{
   return str.split(/\n/g).join(replace);
 }
 // JavaScript Program to Display Date and Time
-
+const dateTime=()=>{
+  return `Date is ${new Date().getDate()} TIme is ${new Date().toLocaleTimeString()}`
+}
 // JavaScript Program to Check Leap Year
+function checkLeap(year) {
+  return (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0)
+}
 // JavaScript Program to Format the Date
+function formatDate(){
+  let date=new Date().getDate();
+  let month=new Date().getMonth()+1;
+  let year=new Date().getFullYear();
+  return date+"-"+month+"-"+year;
+}
 // Javascript Program to Display Current Date
+const currentDate2 = ()=>{
+  return `current date is: ${new Date().getDate()}-` + new Date().toLocaleString("en-us", { month: "long" });
+}
 // JavaScript Program to Compare The Value of Two Dates
+const compareDates = (d1,d2)=>{
+  let date1 = new Date(d1);
+  let date2 = new Date(d2);
+
+  if (date1 < date2) {
+      console.log(`${d1} is less than ${d2}`);
+  } else if (date1 > date2) {
+      console.log(`${d1} is greater than ${d2}`);
+  } else {
+      console.log(`Both dates are equal`);
+  }
+};
 // JavaScript Program to Create Countdown Timer
+
 // JavaScript Program to Remove Specific Item From an Array
 const removeElement=(arr,n)=>{
   return arr.filter(e=>e!==n)
 }
 // JavaScript Program to Check if An Array Contains a Specified Value
+const arraySearch=(arr,i)=>{
+  return arr.includes(i);
+}
 // JavaScript Program to Insert Item in an Array
+const arrayInsert = (arr, i) => {
+  return [i,...arr];
+};
 // JavaScript Program to Append an Object to An Array
+const appendObject=(arr,input)=>{
+  return [...arr,structuredClone(input)];
+}
 // JavaScript Program to Check if An Object is An Array
+function checkObject(obj){
+  return Array.isArray(obj);
+ }
 // JavaScript Program to Empty an Array
 const empty = (arr) => {
   return (arr = "");
@@ -540,8 +579,41 @@ function functionSort(arr){
   })
 }
 // JavaScript Program to Create Two Dimensional Array
+function twodArray(...arr){
+  let newArr = [];
+  arr.forEach(e=>{
+      newArr.push([e]);
+  });
+  return newArr;
+}
 // JavaScript Program to Extract Given Property Values from Objects as Array
+function extractPropertyValues(obj, key) {
+  let result=[];
+  if(typeof obj==='object'){
+    for(let [k,v] of Object.entries(obj)){
+      if(k===key) result.push(v);
+      else if( v==='object'){
+        let innerResults=extractPropertyValues(v,key);
+        result=result.concat(innerResults);
+      }
+    }
+  }
+  return JSON.stringify(result);
+}
 // JavaScript Program to Compare Elements of Two Arrays
+function compareArrayOAI(array1, array2) {
+  if (array1.length !== array2.length)
+      return `Comparision is not possible`;
+  else {
+      let a1 = array1.slice().sort();
+      let a2 = array2.slice().sort();
+      for (let i = 0; i < a1.length; i++) {
+          if (a1[i] !== a2[i])
+              return false;
+      }
+  }
+  return true;
+}
 // JavaScript Program to Get Random Item From an Array
 const getRandEle=(arr)=>{
   let random=Math.floor(Math.random()*arr.length)
