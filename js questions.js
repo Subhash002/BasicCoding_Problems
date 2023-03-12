@@ -303,6 +303,24 @@ const reverse=(string)=>{
   return string.split("").reverse().join("")
 }
 // JavaScript Program to Create Objects in Different Ways
+// Using constructor function 
+function Person() {
+  this.name = 'John',
+  this.age = 20
+}
+const person = new Person();
+
+//Using Instance of Object directly
+const person=new Object({
+  name = 'John',
+  age = 20
+})
+
+//Using Object literal
+let Person={
+  name: 'John',
+    age: 20
+}
 // JavaScript Program to Check the Number of Occurrences of a Character in the String
 const occurEN=(str,check)=>{
   const splitArray=str.split('');
@@ -620,6 +638,15 @@ const getRandEle=(arr)=>{
   return arr[random];
 }
 // JavaScript Program To Perform Intersection Between Two Arrays
+function arrayIntersection(array1,array2){
+  let setA=new Set(array1);
+  let setB=new Set(array2);
+  let results=[];
+  for(let i of setA){
+      if(setB.has(i)) results.push(i);
+  }
+  return results;
+}
 // JavaScript Program to Split Array into Smaller Chunks
 function splitter(arr,n){
   let newArray=[];
@@ -631,14 +658,47 @@ function splitter(arr,n){
 }
 
 // JavaScript Program to Include a JS file in Another JS file
+
 // JavaScript Program to Get File Extension
 const fileExt = (completeName) => {
   let check = completeName.split("");
   return check.slice(check.indexOf(".") + 1, check.length).join("");
 };
 // JavaScript Program To Check If A Variable Is undefined or null
+function checkInput(input){
+  return (input===undefined) || (input===null)
+}
 // JavaScript Program to Set a Default Parameter Value For a Function
+
 // JavaScript Program to Illustrate Different Set Operations
+// Subset
+function subset(setA,setB){
+  for(let i of setB){
+      if(!setA.has(i)) return false;
+  }
+  return true;
+}
+
+const setA = new Set(['apple', 'mango', 'orange']);
+const setB = new Set(['apple', 'orange']);
+
+//Set difference
+function difference(setA,setB){
+  let differenceSET=new Set(setA);
+  for(let i of setB){
+      differenceSET.delete(i);
+  }
+  return differenceSET;
+}
+
+//SET UNION
+function union(a,b){
+  let unionSet=new Set(a);
+  for(let i of b){
+      unionSet.add(i);
+  }
+  return unionSet;
+}
 // Javascript Program to Generate a Random Number Between Two Numbers
 function randomBw(max,min){
   return Math.floor(Math.random() * (max - min + 1) + min);
