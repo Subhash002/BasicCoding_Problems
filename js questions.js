@@ -768,4 +768,11 @@ const removeEle = (arr)=>{
   }
   return results;
 }
+
+//Implement a higher order function 'randInt' which take 2 arguments length and multiplier and return array of random numbers
+const randInt = (len, multiplier) => Array.from({length: len}, () => parseInt(Math.random() * multiplier));
+const withLength=(len,fn)=>(...args)=>fn(len,...args)
+const random5=withLength(5,randInt);
+const random10=withLength(10,randInt);
+
 //mishraprasant73@gmail.com
