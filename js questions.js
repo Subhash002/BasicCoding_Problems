@@ -1,8 +1,12 @@
-// JavaScript Program To Print Hello World
+1.// JavaScript Program To Print Hello World
 const helloWorld = () => {
   console.log("Hello World");
 };
-// JavaScript Program to Add Two Numbers
+
+
+
+
+2.// JavaScript Program to Add Two Numbers
 const sum = (...args) => {
   let sum = 0;
   args.forEach((num) => {
@@ -10,20 +14,34 @@ const sum = (...args) => {
   });
   return sum;
 };
-// JavaScript Program to Find the Square Root
+
+
+
+
+3.// JavaScript Program to Find the Square Root
 const sqrRoot = (num) => {
   return Math.sqrt(num);
 };
-// JavaScript Program to Calculate the Area of a Triangle
+
+
+
+
+4.// JavaScript Program to Calculate the Area of a Triangle
 const areaTring = (l, h) => {
   return (1 / 2) * l * h;
 };
-// JavaScript Program to Swap Two Variables
+
+
+
+5.// JavaScript Program to Swap Two Variables
 const swap = (x, y) => {
   [x, y] = [y, x];
   return [x, y];
 };
-// Javascript Program to Solve Quadratic Equation
+
+
+
+6.// Javascript Program to Solve Quadratic Equation
 function quardicEquation (a,b,c){
   let d = b * b - (4 * a * c);
   if (d > 0) {
@@ -42,19 +60,31 @@ function quardicEquation (a,b,c){
   }
 }
 
-// JavaScript Program to Convert Kilometers to Miles
+
+
+
+7.// JavaScript Program to Convert Kilometers to Miles
 const toMiles = (km) => {
   return `${0.62 * km} kms`;
 };
-// Javascript Program to Convert Celsius to Fahrenheit
+
+
+
+8.// Javascript Program to Convert Celsius to Fahrenheit
 const tofahrenheit=(cel)=>{
   return `${(cel*(9/5))+32} Degree F`
 }
-// Javascript Program to Generate a Random Number
+
+
+
+9.// Javascript Program to Generate a Random Number
 const geneRandom = () => {
   return Math.random();
 };
-// Javascript Program to Check if a number is Positive, Negative, or Zero
+
+
+
+10// Javascript Program to Check if a number is Positive, Negative, or Zero
 const numCheck = (num) => {
   if (Number.isInteger(num)) {
     return num > 0
@@ -64,11 +94,17 @@ const numCheck = (num) => {
       : console.log("Number is negetive");
   }
 };
-// Javascript Program to Check if a Number is Odd or Even
+
+
+
+11.// Javascript Program to Check if a Number is Odd or Even
 const oddEven = (num) => {
   return num % 2 === 0 ? `Even Number` : `Odd Number`;
 };
-// JavaScript Program to Find the Largest Among Three Numbers
+
+
+
+12.// JavaScript Program to Find the Largest Among Three Numbers
 const largestNum = (num1, num2, num3) => {
   if (Number.isInteger(num1, num2, num3)) {
     return num1 > num2 && num3
@@ -78,7 +114,11 @@ const largestNum = (num1, num2, num3) => {
       : `Number 3 is largest amoung all`;
   }
 };
-// JavaScript Program to Check Prime Number
+
+
+
+
+13.// JavaScript Program to Check Prime Number
 const primeCheck = (num)=>{
   let counter = 0;
   for (let i = 1; i <= num; i++) {
@@ -92,7 +132,10 @@ const primeCheck = (num)=>{
       return `PRIME NUMBER`
 }
 
-// JavaScript Program to Print All Prime Numbers in an Interval
+
+
+
+14.// JavaScript Program to Print All Prime Numbers in an Interval
 const primeCheckInterval = (num1,num2)=>{
   let primeList = [];
   for(let j=num1;j<num2;j++){
@@ -108,12 +151,17 @@ const primeCheckInterval = (num1,num2)=>{
   }
   return primeList;
 }
-// JavaScript Program to Find the Factorial of a Number
+
+
+
+15.// JavaScript Program to Find the Factorial of a Number
 const fact = (num)=>{
   if (num === 1)
       return 1;
   else return num*fact(num-1);
 }
+
+
 
 // JavaScript Program to Display the Multiplication Table
 const multiplicatinTable = (num)=>{
