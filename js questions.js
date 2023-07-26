@@ -582,7 +582,18 @@ const compareDates = (d1,d2)=>{
   }
 };
 // JavaScript Program to Create Countdown Timer
-
+const timer = (n) => {
+  const timerId = setInterval(() => {
+    if (n < 1) {
+      clearInterval(timerId);
+      console.log("Your time is up!");
+    } else {
+      console.log(n);
+      n--;
+    }
+  }, 1000);
+};
+timer(5);
 // JavaScript Program to Remove Specific Item From an Array
 const removeElement=(arr,n)=>{
   return arr.filter(e=>e!==n)
